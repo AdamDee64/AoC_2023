@@ -13,7 +13,7 @@ is_ascii_number :: proc(n : u8) -> bool {
     return false
 }
 
-get_number :: proc(text : ^[]u8, i : int) -> int {
+get_number :: proc(text : ^[]u8, i : int) -> (int, int) {
     output := int(text[i]) - 48
     c := 1
     for {
@@ -25,7 +25,7 @@ get_number :: proc(text : ^[]u8, i : int) -> int {
             break
         }
     }
-    return output
+    return output, c
 }
 
 assign_color :: proc(text : ^[]u8, i : int, game_set : ^[3]int, n : int) {
@@ -61,19 +61,20 @@ main :: proc() {
     i := 0
 
     for i < size {
+        jump : int
         v := int(text[i])
         
         switch v {
             case 71:
-            i += 8
+            n : int
+            i += 5
+            n, jump = get_number(&text, i)
+            i += 2 + jump
 
             case 48..=57:
-            n := get_number(&text, i)
-            if n > 9 {
-                i += 3
-            } else {
-                i += 2
-            }
+            n : int
+            n, jump = get_number(&text, i)
+            i += 1 + jump
             assign_color(&text, i, &game_set, n)
             i += 3
 
