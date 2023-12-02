@@ -12,5 +12,5 @@ I am not doing this to be competitive so I will likely fall behind as I work ful
 
 Status: 
 Day 1 parts A and B complete. Learned basic file reading in Odin
-
+Day 2 complete and correct. More parsing, made some helper procedures for easier to read code
 

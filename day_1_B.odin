@@ -2,9 +2,11 @@ package day_1_B
 
 import "core:os"
 import "core:fmt"
+import "core:time"
 
-match_text :: proc(text : ^[]u8, i : int) -> int {
-    d := len(text) - i
+match_text :: proc(text : ^[]u8, i : int, size : int) -> int {
+
+    d := size - i
 
     if d >= 5 {
         switch text[i] {
@@ -74,49 +76,50 @@ match_text :: proc(text : ^[]u8, i : int) -> int {
 
 }
 
-
 main :: proc() {
+    start := time.now()
 
-input, open_err := os.open("day_1_input.txt")
-text, read_err := os.read_entire_file_from_handle(input)
+    input, open_err := os.open("day_1_input.txt")
+    text, read_err := os.read_entire_file_from_handle(input)
 
-size := len(text)
+    size := len(text)
 
-ten := 0
-one := 0
-total := 0
+    ten := 0
+    one := 0
+    total := 0
 
-for i in 0..<size {
-    v := int(text[i])
-    
-
-    switch v {
-        case 48..=57:
-        one = v - 48
-        if ten == 0 {
-            ten = v - 48
-        }
+    for i in 0..<size {
+        v := int(text[i])
         
-        case 101..=116:
-        test := match_text(&text, i)
-        if test > 0 {
-            one = test
+
+        switch v {
+            case 48..=57:
+            one = v - 48
             if ten == 0 {
-                ten = test
+                ten = v - 48
             }
+            
+            case 101..=116:
+            test := match_text(&text, i, size)
+            if test > 0 {
+                one = test
+                if ten == 0 {
+                    ten = test
+                }
+            }
+
+            case 10:
+            total = total + ten * 10 + one
+            ten = 0
+            one = 0
+
         }
 
-        case 10:
-        total = total + ten * 10 + one
-        ten = 0
-        one = 0
-
-        case:
-        continue
     }
 
-}
+    end := time.since(start)
+    ms := time.duration_milliseconds(end)
 
-fmt.print(total, "\n")
+    fmt.print(total, ms, "milliseconds \n")
 
 }
