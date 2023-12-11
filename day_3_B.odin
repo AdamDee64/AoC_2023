@@ -1,4 +1,4 @@
-package day_3_A
+package day_3_B
 
 import "core:os"
 import "core:fmt"

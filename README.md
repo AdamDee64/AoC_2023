@@ -12,6 +12,7 @@ I am not doing this to be competitive so I will likely fall behind as I work ful
 
 Status: <br>
 <a href="https://adventofcode.com/2023/day/1">Day 1</a> parts A and B complete. Learned basic file reading in Odin<br>
-<a href="https://adventofcode.com/2023/day/1">Day 2</a> complete and correct. More parsing, made some helper procedures for easier to read code<br>
-<a href="https://adventofcode.com/2023/day/1">Day 3</a> complete and correct. Many helper procedures made and working together.<br>
-<a href="https://adventofcode.com/2023/day/1">Day 4</a> complete and correct. Worked all week so I will be catching up on the challenges. Added notes as the problems are becoming more complicated (as expected)<br>
+<a href="https://adventofcode.com/2023/day/2">Day 2</a> complete and correct. More parsing, made some helper procedures for easier to read code<br>
+<a href="https://adventofcode.com/2023/day/3">Day 3</a> complete and correct. Many helper procedures made and working together.<br>
+<a href="https://adventofcode.com/2023/day/4">Day 4</a> complete and correct. Worked all week so I will be catching up on the challenges. Added notes as the problems are becoming more complicated (as expected)<br>
+<a href="https://adventofcode.com/2023/day/5">Day 5</a> part 1 complete, got some practice using odin's dynamic arrays<br>
