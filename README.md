@@ -17,3 +17,4 @@ Status: <br>
 <a href="https://adventofcode.com/2023/day/4">Day 4</a> complete and correct. Worked all week so I will be catching up on the challenges. Added notes as the problems are becoming more complicated (as expected)<br>
 <a href="https://adventofcode.com/2023/day/5">Day 5</a> part 1 complete, got some practice using odin's dynamic arrays<br>
 <a href="https://adventofcode.com/2023/day/6">Day 6</a> Both parts complete, easy compared to day 5<br>
+<a href="https://adventofcode.com/2023/day/7">Day 7</a> I spent a lot of time on this one implementing multiple sorts in order to score the cards correctly. After part A was correct, part B was rather simple. The timing took a real hit due to the multiple sorting, roughly 40 milliseconds total run time for each part. All the previous challenge solutions are in the sub-millisecond range on my machine. The sorting algorithm is a basic bubble sort though and could be improved upon.<br>
